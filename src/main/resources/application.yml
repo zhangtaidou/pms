@@ -1,0 +1,30 @@
+server:
+  port: 8989
+  servlet:
+    context-path: /pms
+    #页面热部署
+    jsp:
+      init-parameters:
+        development: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pms
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+      #设置编码格式
+  http:
+    encoding:
+      charset: utf-8
+      #是否强制
+      force: true
+mybatis:
+  #实体类别名
+  type-aliases-package: com.kedianqiao.entity
+  mapper-locations: classpath:com/kedianqiao/mappers/*Mapper.xml

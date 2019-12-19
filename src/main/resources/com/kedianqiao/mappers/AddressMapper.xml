@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kedianqiao.mapper.AddressMapper">
+<!--根据指定房号查询订单-->
+    <select id="selectOneByAddress" resultType="Address">
+        select id,visitor_name,phone,team,pay_method,retain_date,place_date,occupancy_type,salesman,tourists_canal,
+        price_scheme,room_type,room_number,member_number,begin_date,end_date,visitor_sex,date_pricel,papers_number,
+        birth_date,plate_number,visitor_like,visitor_nationality,visitor_nativeplace,detailed_address,receipt_raise,
+        remarks,status,treaty_unit,admin_id,nation,papers_type,arrears,arrears_price
+        from address
+        where admin_id=#{admin_id} and room_number=#{room_number}
+    </select>
+</mapper>
