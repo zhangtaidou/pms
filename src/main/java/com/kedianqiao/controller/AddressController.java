@@ -14,6 +14,7 @@ public class AddressController {
     @RequestMapping("/selectOneByAddress")
     public Address selectOneByAddress(Integer admin_id,Integer room_number){
         Address address = addressServer.selectOneByAddress(admin_id, room_number);
+        //test
         return address;
     }
 }
